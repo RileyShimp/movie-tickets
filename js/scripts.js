@@ -1,4 +1,4 @@
-function Ticket(movie, time, age) {
+function Ticket(movie, time, age,) {
   this.movie = movie;
   this.time = time;
   this.age = age;
@@ -32,14 +32,15 @@ Ticket.prototype.priceOfMovie = function() {
   return this.price;
 }
 
+
 $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
-    const inputMovie = $("input#movie").val();
-    const inputTime = $("input#time").val();
-    const inputAge = $("input#age").val();
+    const inputMovie = $("#movie").val();
+    const inputTime = $("#time").val();
+    const inputAge = $("#age").val();
 
-    let newTicket = new Ticket(inputMovie, inputTime, inputAge)
+    let newTicket = new Ticket(inputMovie, inputTime, inputAge,)
     newTicket.priceOfAge();
     newTicket.matinee();
     newTicket.priceOfMovie();
